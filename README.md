@@ -41,3 +41,6 @@ Aqui não apenas escrevemos código, nós aplicamos engenharia:
 ├── index.html      # A estrutura semântica (O Chassi)
 ├── style.css       # O design e efeitos visuais (A Pintura)
 └── script.js       # A lógica de animação (O Motor V8)
+
+
+![Preview do Projeto](./preview.png)
