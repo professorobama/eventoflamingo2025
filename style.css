@@ -1,0 +1,116 @@
+/* --- Reset Básico (A "Funilaria") --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* --- O Efeito Parallax (Mágica 1) --- */
+.hero-section {
+    /* 1. Imagem de Fundo */
+    /* Peça para eles baixarem uma imagem de 'tech' (do Unsplash, Pexels) e colocar na pasta */
+    background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9e38f71e');
+    
+    /* 2. O Pulo do Gato */
+    background-attachment: fixed; /* Isso congela o fundo */
+
+    /* 3. Ajustes de Cobertura */
+    height: 100vh; /* 100% da altura da tela */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* 4. Textinho centralizado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+}
+
+/* --- Seções de Conteúdo --- */
+.content-section {
+    padding: 80px 20px;
+    /* Isso 'corta' o conteúdo que vaza para fora, essencial para o slide-in */
+    overflow-x: hidden; 
+}
+
+.card {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.bg-dark {
+    background-color: #f4f4f4;
+}
+
+.bg-dark .card {
+    background-color: #333;
+    color: white;
+}
+
+/* --- O Botão (CTA) --- */
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* --- A Mágica do Scroll (Mágica 2) --- */
+
+/* * ESTADO INICIAL (Escondido)
+ * O elemento COMEÇA assim.
+*/
+.hidden {
+    opacity: 0;
+    /* 'transition' é a chave! Diz ao CSS para 'animar' qualquer mudança
+       que aconteça nessas propriedades (opacity, transform). */
+    transition: all 1s ease-out;
+}
+
+/* Modificadores de direção */
+.hidden-left {
+    transform: translateX(-100%);
+}
+
+.hidden-right {
+    transform: translateX(100%);
+}
+
+.hidden-fade {
+    /* Só precisa da 'opacity: 0' da classe .hidden principal */
+    transform: translateY(50px); /* Bônus: sobe um pouquinho */
+}
+
+
+/* * ESTADO FINAL (Visível)
+ * Esta é a classe que o JavaScript vai ADICIONAR.
+*/
+.show {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
