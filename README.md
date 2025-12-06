@@ -1,5 +1,7 @@
 # 🚀 Master Class: Landing Page Premium com UI/UX Imersivo
 
+![Preview do Projeto](./preview.png)
+
 > "Do Técnico ao Superior: Construindo experiências digitais, não apenas sites."
 
 ![Status](https://img.shields.io/badge/Status-Concluído-success)
@@ -42,5 +44,3 @@ Aqui não apenas escrevemos código, nós aplicamos engenharia:
 ├── style.css       # O design e efeitos visuais (A Pintura)
 └── script.js       # A lógica de animação (O Motor V8)
 
-
-![Preview do Projeto](./preview.png)
